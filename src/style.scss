@@ -1,0 +1,139 @@
+@import url("https: //cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css");
+
+/* applies to everything */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+
+// @mixin phone {
+//     @media screen and (max-width: 500px) {
+//         @content;
+//     }
+// }
+
+// @mixin tablet {
+//     @media screen and (min-width: 501px) and (max-width: 960px) {
+//         @content;
+//     }
+// }
+
+// @mixin desktop {
+//     @media screen and (min-width: 961px) {
+//         @content;
+//     }
+// }
+
+body {
+    height: 100%;
+    background-color: #F2EFE6;
+    font-family: Helvetica;
+
+    #menu {
+        overflow: hidden;
+        background-color: #F2EFE6;
+        color: black;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        width: 100%;
+        height: 30px;
+        padding: 5px;
+        margin-left: 25px;
+    }
+
+    main {
+        margin: 30px;
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+
+        }
+
+
+        .header {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10;
+            margin: 10;
+            font-size: 3rem;
+
+        }
+
+        #h1 {
+            width: 35%;
+            background-color: #F2EFE6;
+            position: relative;
+            text-align: center;
+            display: block;
+
+
+        }
+
+        #hello {
+
+            position: relative;
+            top: 45%;
+            // left: 45%;
+
+        }
+
+        #h2 {
+            width: 65%;
+            background-color: #BD782D;
+            display: flex;
+            text-align: left;
+            position: relative;
+        }
+
+        #mark {
+            position: relative;
+            top: 45%;
+            left: 5%;
+        }
+
+        // #conanan {
+        //     position: relative;
+        //     top: 45%;
+        // }
+
+        .header1 {
+            height: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10;
+            margin: 10;
+
+        }
+
+        #markwho {
+            background-color: #63503F;
+            width: 35%;
+        }
+
+        #aboutme {
+            background-color: #F2EFE6;
+            width: 65%;
+        }
+    }
+
+    #footer {
+        // overflow: hidden;
+        background-color: #F2EFE6;
+        color: black;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        padding: 5px;
+    }
+
+
+}

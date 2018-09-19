@@ -1,0 +1,115 @@
+@import url("https: //cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css");
+/* applies to everything */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #F2EFE6;
+  font-family: Helvetica;
+}
+
+body #menu {
+  overflow: hidden;
+  background-color: #F2EFE6;
+  color: black;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  margin-left: 25px;
+}
+
+body main {
+  margin: 30px;
+}
+
+body main div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100%;
+}
+
+body main .header {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10;
+  margin: 10;
+  font-size: 3rem;
+}
+
+body main #h1 {
+  width: 35%;
+  background-color: #F2EFE6;
+  position: relative;
+  text-align: center;
+  display: block;
+}
+
+body main #hello {
+  position: relative;
+  top: 45%;
+}
+
+body main #h2 {
+  width: 65%;
+  background-color: #BD782D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  position: relative;
+}
+
+body main #mark {
+  position: relative;
+  top: 45%;
+  left: 5%;
+}
+
+body main .header1 {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10;
+  margin: 10;
+}
+
+body main #markwho {
+  background-color: #63503F;
+  width: 35%;
+}
+
+body main #aboutme {
+  background-color: #F2EFE6;
+  width: 65%;
+}
+
+body #footer {
+  background-color: #F2EFE6;
+  color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+}
+/*# sourceMappingURL=style.css.map */
