@@ -1,4 +1,5 @@
 @import url("https: //cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css");
+// @import url(typebase.css);
 
 /* applies to everything */
 * {
@@ -8,6 +9,14 @@
     height: 100%;
 }
 
+// $font-stack: Helvetica,
+// sans-serif;
+$bordercolor: white;
+$bgcolor: #F2EFE6;
+$boxcolor1: red;
+$textcolor1: white;
+$boxcolor2: black;
+$textcolor: black;
 
 // @mixin phone {
 //     @media screen and (max-width: 500px) {
@@ -28,14 +37,14 @@
 // }
 
 body {
-    height: 100%;
-    background-color: #F2EFE6;
-    font-family: Helvetica;
+    // height: 100%;
+    background-color: $bordercolor;
+    // font-family: Helvetica;
+    color: $textcolor;
 
     #menu {
         overflow: hidden;
-        background-color: #F2EFE6;
-        color: black;
+        background-color: $bordercolor;
         position: fixed;
         z-index: 1;
         top: 0;
@@ -48,45 +57,42 @@ body {
     main {
         margin: 30px;
 
-        div {
-            display: flex;
-            flex-wrap: wrap;
-            height: 100%;
+        // div {
+        //     display: flex;
+        //     flex-wrap: wrap;
 
-        }
+        // }
 
 
         .header {
-            height: 100%;
+            height: 100vh;
             display: flex;
             flex-wrap: wrap;
             padding: 10;
             margin: 10;
-            font-size: 3rem;
+            font-size: 3vw;
 
         }
 
         #h1 {
             width: 35%;
-            background-color: #F2EFE6;
+            background-color: $bgcolor;
             position: relative;
             text-align: center;
             display: block;
-
-
         }
 
         #hello {
 
             position: relative;
-            top: 45%;
+            top: 40%;
             // left: 45%;
 
         }
 
         #h2 {
             width: 65%;
-            background-color: #BD782D;
+            background-color: $boxcolor1;
             display: flex;
             text-align: left;
             position: relative;
@@ -94,38 +100,185 @@ body {
 
         #mark {
             position: relative;
-            top: 45%;
+            top: 40%;
             left: 5%;
+            color: $textcolor1;
         }
 
-        // #conanan {
-        //     position: relative;
-        //     top: 45%;
-        // }
+        .parallax {
+            /* The image used */
+            background-image: url("parallax.jpeg");
 
-        .header1 {
-            height: 80%;
-            display: flex;
-            flex-wrap: wrap;
+            /* Full height */
+            max-height: 30vh;
+            min-width: 100%;
+            display: block;
+            text-align: center;
+
+
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .markwho {
+            position: relative;
+            opacity: .5;
+            vertical-align: middle;
+            font-size: 4vw;
+            top: 45%;
+            color: red;
+        }
+
+        .introblock {
+            background-color: red;
+            display: block;
             padding: 10;
             margin: 10;
+            height: auto;
 
         }
 
-        #markwho {
-            background-color: #63503F;
-            width: 35%;
+        .intro {
+            background-color: $bgcolor;
+            display: block;
+            text-align: right;
+            padding-top: 30px;
+            height: auto;
+            top: 50%;
+            text-align: center;
+            font-size: 3vw;
         }
 
-        #aboutme {
-            background-color: #F2EFE6;
-            width: 65%;
+        .introparagraph {
+            background-color: $bgcolor;
+            display: block;
+            text-align: justify;
+            padding: 30px;
+            height: auto;
+            top: 50%;
+            font-size: 2vw;
         }
+
+        // .hire {
+        //     align-self: center;
+        // }
+
+        .skillset {
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10;
+            font-size: 1rem;
+            padding: 10;
+            width: 100%;
+        }
+
+        #skills {
+            width: 40%;
+            background-color: red;
+            position: relative;
+            text-align: center;
+            display: grid;
+            height: auto;
+            font-size: 3vw;
+        }
+
+        #tech {
+            width: 60%;
+            background-color: $boxcolor2;
+            display: block;
+            text-align: left;
+            padding: 50px;
+            position: relative;
+            color: $textcolor1;
+            font-size: 1.5vw;
+        }
+
+        .projectinfo {
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10;
+            font-size: 1.5vw;
+            padding: 10;
+        }
+
+        #projectdetails {
+            width: 60%;
+            background-color: $bgcolor;
+            position: relative;
+            text-align: left;
+            display: grid;
+            height: auto;
+        }
+
+        #projects {
+            width: 40%;
+            background-color: red;
+            display: block;
+            text-align: left;
+            padding: 50px;
+            position: relative;
+            color: $textcolor1;
+            height: auto;
+        }
+
+        .aboutme {
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10;
+            font-size: 1rem;
+            padding: 10;
+        }
+
+        #history {
+            width: 40%;
+            background-color: $bgcolor;
+            position: relative;
+            text-align: left;
+            display: grid;
+            height: auto;
+        }
+
+        #experiencedetails {
+            width: 60%;
+            background-color: red;
+            display: grid;
+            text-align: left;
+            padding: 50px;
+            position: relative;
+            color: $textcolor1;
+            height: auto;
+        }
+
+        .contact {
+            background-color: red;
+            display: block;
+            margin-bottom: 35px;
+            height: auto;
+
+        }
+
+        #contactdetails {
+            background-color: $bgcolor;
+            display: block;
+            text-align: right;
+            height: auto;
+            text-align: center;
+        }
+
+
+
     }
 
     #footer {
         // overflow: hidden;
-        background-color: #F2EFE6;
+        background-color: $bordercolor;
         color: black;
         position: fixed;
         bottom: 0;
@@ -133,6 +286,7 @@ body {
         width: 100%;
         height: 30px;
         padding: 5px;
+        margin-left: 25px;
     }
 
 

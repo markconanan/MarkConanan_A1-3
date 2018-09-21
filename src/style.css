@@ -9,15 +9,13 @@
 }
 
 body {
-  height: 100%;
-  background-color: #F2EFE6;
-  font-family: Helvetica;
+  background-color: white;
+  color: black;
 }
 
 body #menu {
   overflow: hidden;
-  background-color: #F2EFE6;
-  color: black;
+  background-color: white;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -31,17 +29,8 @@ body main {
   margin: 30px;
 }
 
-body main div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 100%;
-}
-
 body main .header {
-  height: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,7 +38,7 @@ body main .header {
       flex-wrap: wrap;
   padding: 10;
   margin: 10;
-  font-size: 3rem;
+  font-size: 3vw;
 }
 
 body main #h1 {
@@ -62,12 +51,12 @@ body main #h1 {
 
 body main #hello {
   position: relative;
-  top: 45%;
+  top: 40%;
 }
 
 body main #h2 {
   width: 65%;
-  background-color: #BD782D;
+  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,33 +66,183 @@ body main #h2 {
 
 body main #mark {
   position: relative;
-  top: 45%;
+  top: 40%;
   left: 5%;
+  color: white;
 }
 
-body main .header1 {
-  height: 80%;
+body main .parallax {
+  /* The image used */
+  background-image: url("parallax.jpeg");
+  /* Full height */
+  max-height: 30vh;
+  min-width: 100%;
+  display: block;
+  text-align: center;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body main .markwho {
+  position: relative;
+  opacity: .5;
+  vertical-align: middle;
+  font-size: 4vw;
+  top: 45%;
+  color: red;
+}
+
+body main .introblock {
+  background-color: red;
+  display: block;
+  padding: 10;
+  margin: 10;
+  height: auto;
+}
+
+body main .intro {
+  background-color: #F2EFE6;
+  display: block;
+  text-align: right;
+  padding-top: 30px;
+  height: auto;
+  top: 50%;
+  text-align: center;
+  font-size: 3vw;
+}
+
+body main .introparagraph {
+  background-color: #F2EFE6;
+  display: block;
+  text-align: justify;
+  padding: 30px;
+  height: auto;
+  top: 50%;
+  font-size: 2vw;
+}
+
+body main .skillset {
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 10;
   margin: 10;
+  font-size: 1rem;
+  padding: 10;
+  width: 100%;
 }
 
-body main #markwho {
-  background-color: #63503F;
-  width: 35%;
+body main #skills {
+  width: 40%;
+  background-color: red;
+  position: relative;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  height: auto;
+  font-size: 3vw;
 }
 
-body main #aboutme {
+body main #tech {
+  width: 60%;
+  background-color: black;
+  display: block;
+  text-align: left;
+  padding: 50px;
+  position: relative;
+  color: white;
+  font-size: 1.5vw;
+}
+
+body main .projectinfo {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10;
+  font-size: 1.5vw;
+  padding: 10;
+}
+
+body main #projectdetails {
+  width: 60%;
   background-color: #F2EFE6;
-  width: 65%;
+  position: relative;
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  height: auto;
+}
+
+body main #projects {
+  width: 40%;
+  background-color: red;
+  display: block;
+  text-align: left;
+  padding: 50px;
+  position: relative;
+  color: white;
+  height: auto;
+}
+
+body main .aboutme {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10;
+  font-size: 1rem;
+  padding: 10;
+}
+
+body main #history {
+  width: 40%;
+  background-color: #F2EFE6;
+  position: relative;
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  height: auto;
+}
+
+body main #experiencedetails {
+  width: 60%;
+  background-color: red;
+  display: -ms-grid;
+  display: grid;
+  text-align: left;
+  padding: 50px;
+  position: relative;
+  color: white;
+  height: auto;
+}
+
+body main .contact {
+  background-color: red;
+  display: block;
+  margin-bottom: 35px;
+  height: auto;
+}
+
+body main #contactdetails {
+  background-color: #F2EFE6;
+  display: block;
+  text-align: right;
+  height: auto;
+  text-align: center;
 }
 
 body #footer {
-  background-color: #F2EFE6;
+  background-color: white;
   color: black;
   position: fixed;
   bottom: 0;
@@ -111,5 +250,6 @@ body #footer {
   width: 100%;
   height: 30px;
   padding: 5px;
+  margin-left: 25px;
 }
 /*# sourceMappingURL=style.css.map */

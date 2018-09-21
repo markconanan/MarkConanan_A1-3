@@ -1,0 +1,369 @@
+    @import url("https: //cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css");
+    // @import url(typebase.css);
+
+    /* applies to everything */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        height: 100%;
+    }
+
+    // $font-stack: Helvetica,
+    // sans-serif;
+    $bordercolor: white;
+    $bgcolor: #F2EFE6;
+    $boxcolor1: red;
+    $textcolor1: white;
+    $boxcolor2: black;
+    $textcolor: black;
+
+    // @mixin phone {
+    //     @media screen and (max-width: 500px) {
+    //         @content;
+    //     }
+    // }
+
+    // @mixin tablet {
+    //     @media screen and (min-width: 501px) and (max-width: 960px) {
+    //         @content;
+    //     }
+    // }
+
+    // @mixin desktop {
+    //     @media screen and (min-width: 961px) {
+    //         @content;
+    //     }
+    // }
+
+    body {
+        // height: 100%;
+        background-color: $bordercolor;
+        // font-family: Helvetica;
+        color: $textcolor;
+
+        #menu {
+            overflow: hidden;
+            background-color: $bordercolor;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            width: 100%;
+            height: 30px;
+            padding: 5px;
+            margin-left: 25px;
+            font-family: Montserrat;
+        }
+
+        @keyframes headeranimation {
+            from {
+                background-position: right bottom;
+            }
+
+            to {
+                background-position: left bottom;
+            }
+        }
+
+        main {
+            margin: 30px;
+
+
+            // div {
+            //     display: flex;
+            //     flex-wrap: wrap;
+
+            // }
+
+
+
+            .header {
+                height: 100vh;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 10;
+                margin: 10;
+                font-family: Montserrat;
+                font-size: 3vw;
+
+            }
+
+            #h1 {
+                width: 35%;
+                background-color: $bgcolor;
+                position: relative;
+                text-align: center;
+                display: block;
+            }
+
+            #hello {
+                position: relative;
+                top: 40%;
+
+                // left: 45%;
+
+            }
+
+            #h2 {
+                width: 65%;
+                // background-color: $bgcolor;
+                background: linear-gradient(to right, red 50%, $bgcolor 50%);
+                background-size: 200% 100%;
+                background-position: right bottom;
+                // margin-left: 10px;
+                transition: all 2s ease;
+                display: flex;
+                text-align: left;
+                position: relative;
+                animation: headeranimation 2s forwards;
+            }
+
+            #mark {
+                position: relative;
+                top: 40%;
+                left: 5%;
+                color: $bgcolor;
+            }
+
+            .imageparallax {
+                /* The image used */
+                background-image: url("parallax2.jpg");
+
+                /* Full height */
+                height: 50%;
+
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .parallax {
+                /* The image used */
+                background-image: url("parallax.jpeg");
+
+                /* Full height */
+                height: 70vh;
+                min-width: 100%;
+                padding: 20;
+                display: grid;
+                // grid-template-columns: auto auto auto auto;
+                grid-template-areas: "intro empty""introparagraph empty";
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            // .markwho {
+            //     position: relative;
+            //     opacity: .5;
+            //     vertical-align: middle;
+            //     font-size: 4vw;
+            //     top: 45%;
+            //     color: red;
+            //     grid-area: markwho;
+            // }
+            .empty {
+                background-color: $bgcolor;
+                height: 80px;
+            }
+
+            .intro {
+                background-color: $bgcolor;
+                display: grid;
+                padding-top: 50px;
+                padding-left: 100px;
+                height: auto;
+                // top: 50%;
+                position: relative;
+                width: 60%;
+                font-size: 2.5vw;
+                grid-area: intro;
+                font-family: Lato;
+                line-height: 1vw;
+            }
+
+            .introparagraph {
+                background-color: $bgcolor;
+                display: grid;
+                text-align: justify;
+                // position: relative;
+                padding-top: 20px;
+                padding-left: 100px;
+                padding-right: 40px;
+                width: 60%;
+                // padding: 30px;
+                height: auto;
+                // top: 50%;
+                font-size: 1.5vw;
+                grid-area: introparagraph;
+                font-family: Libre Baskerville;
+                font-style: italic;
+            }
+
+            .grid {
+
+                /* The image used */
+                background-image: url("parallax3.jpeg");
+                /* Full height */
+                height: 80vh;
+                min-width: 100%;
+                padding: 20;
+                display: grid;
+                grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+                grid-template-areas: "empty . . skills skills";
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+            }
+
+            .empty2 {
+                background-color: $bgcolor;
+            }
+
+            // .hire {
+            //     align-self: center;
+            // }
+
+            // .skillset {
+            //     height: auto;
+            //     display: flex;
+            //     flex-wrap: wrap;
+            //     margin: 10;
+            //     font-size: 1rem;
+            //     padding: 10;
+            //     width: 100%;
+            // }
+
+            .skills {
+                // width: 40%;
+                background-color: $bgcolor;
+                padding-left: 50px;
+                padding-right: 50px;
+                // padding-top: 80px;
+                position: relative;
+                // text-align: center;
+                display: grid;
+                height: auto;
+                // font-size: 2vw;
+                font-family: Lato;
+                // font-style: bold;
+                grid-area: skills;
+            }
+
+            .tech {
+                width: 100%;
+                font-family: Lato;
+                // padding-top: 80px;
+                background-color: black;
+                display: block;
+                text-align: left;
+                padding-left: 50px;
+                position: relative;
+                color: $textcolor1;
+                font-size: 1.5vw;
+                grid-area: tech;
+                height: auto;
+            }
+
+            .projectinfo {
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 10;
+                font-size: 1.5vw;
+                padding: 10;
+            }
+
+            #projectdetails {
+                width: 60%;
+                background-color: $bgcolor;
+                position: relative;
+                text-align: left;
+                display: grid;
+                height: auto;
+            }
+
+            #projects {
+                width: 40%;
+                background-color: red;
+                display: block;
+                text-align: left;
+                padding: 50px;
+                position: relative;
+                color: $textcolor1;
+                height: auto;
+            }
+
+            .aboutme {
+                height: auto;
+                display: grid;
+                grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+                grid-template-areas: ". history details details details";
+                font-size: 1rem;
+                padding: 10;
+            }
+
+            .history {
+
+                background-color: $bgcolor;
+                position: relative;
+                text-align: left;
+                display: grid;
+                height: auto;
+                grid-area: history;
+            }
+
+            .details {
+
+                background-color: red;
+                display: grid;
+                text-align: left;
+                padding: 50px;
+                position: relative;
+                color: $textcolor1;
+                height: auto;
+                grid-area: details;
+            }
+
+            .contact {
+                background-color: red;
+                display: block;
+                margin-bottom: 35px;
+                height: auto;
+
+            }
+
+            #contactdetails {
+                background-color: $bgcolor;
+                display: block;
+                text-align: right;
+                height: auto;
+                text-align: center;
+            }
+
+
+
+        }
+
+        #footer {
+            // overflow: hidden;
+            background-color: $bordercolor;
+            color: black;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            padding: 5px;
+            margin-left: 25px;
+        }
+
+
+    }

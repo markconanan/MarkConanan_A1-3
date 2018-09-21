@@ -1,0 +1,319 @@
+@import url("https: //cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css");
+/* applies to everything */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+body #menu {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  margin-left: 25px;
+  font-family: Montserrat;
+}
+
+@-webkit-keyframes headeranimation {
+  from {
+    background-position: right bottom;
+  }
+  to {
+    background-position: left bottom;
+  }
+}
+
+@keyframes headeranimation {
+  from {
+    background-position: right bottom;
+  }
+  to {
+    background-position: left bottom;
+  }
+}
+
+body main {
+  margin: 30px;
+}
+
+body main .header {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10;
+  margin: 10;
+  font-family: Montserrat;
+  font-size: 3vw;
+}
+
+body main #h1 {
+  width: 35%;
+  background-color: #F2EFE6;
+  position: relative;
+  text-align: center;
+  display: block;
+}
+
+body main #hello {
+  position: relative;
+  top: 40%;
+}
+
+body main #h2 {
+  width: 65%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, red), color-stop(50%, #F2EFE6));
+  background: linear-gradient(to right, red 50%, #F2EFE6 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  position: relative;
+  -webkit-animation: headeranimation 2s forwards;
+          animation: headeranimation 2s forwards;
+}
+
+body main #mark {
+  position: relative;
+  top: 40%;
+  left: 5%;
+  color: #F2EFE6;
+}
+
+body main .imageparallax {
+  /* The image used */
+  background-image: url("parallax2.jpg");
+  /* Full height */
+  height: 50%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body main .parallax {
+  /* The image used */
+  background-image: url("parallax.jpeg");
+  /* Full height */
+  height: 70vh;
+  min-width: 100%;
+  padding: 20;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "intro empty" "introparagraph empty";
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body main .empty {
+  background-color: #F2EFE6;
+  height: 80px;
+}
+
+body main .intro {
+  background-color: #F2EFE6;
+  display: -ms-grid;
+  display: grid;
+  padding-top: 50px;
+  padding-left: 100px;
+  height: auto;
+  position: relative;
+  width: 60%;
+  font-size: 2.5vw;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: intro;
+  font-family: Lato;
+  line-height: 1vw;
+}
+
+body main .introparagraph {
+  background-color: #F2EFE6;
+  display: -ms-grid;
+  display: grid;
+  text-align: justify;
+  padding-top: 20px;
+  padding-left: 100px;
+  padding-right: 40px;
+  width: 60%;
+  height: auto;
+  font-size: 1.5vw;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: introparagraph;
+  font-family: Libre Baskerville;
+  font-style: italic;
+}
+
+body main .grid {
+  /* The image used */
+  background-image: url("parallax3.jpeg");
+  /* Full height */
+  height: 80vh;
+  min-width: 100%;
+  padding: 20;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr 1fr 1fr 1fr;
+      grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+      grid-template-areas: "empty . . skills skills";
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body main .empty2 {
+  background-color: #F2EFE6;
+}
+
+body main .skills {
+  background-color: #F2EFE6;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  height: auto;
+  font-family: Lato;
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: skills;
+}
+
+body main .tech {
+  width: 100%;
+  font-family: Lato;
+  background-color: black;
+  display: block;
+  text-align: left;
+  padding-left: 50px;
+  position: relative;
+  color: white;
+  font-size: 1.5vw;
+  grid-area: tech;
+  height: auto;
+}
+
+body main .projectinfo {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10;
+  font-size: 1.5vw;
+  padding: 10;
+}
+
+body main #projectdetails {
+  width: 60%;
+  background-color: #F2EFE6;
+  position: relative;
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  height: auto;
+}
+
+body main #projects {
+  width: 40%;
+  background-color: red;
+  display: block;
+  text-align: left;
+  padding: 50px;
+  position: relative;
+  color: white;
+  height: auto;
+}
+
+body main .aboutme {
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr 1fr 1fr 1fr;
+      grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+      grid-template-areas: ". history details details details";
+  font-size: 1rem;
+  padding: 10;
+}
+
+body main .history {
+  background-color: #F2EFE6;
+  position: relative;
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  height: auto;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: history;
+}
+
+body main .details {
+  background-color: red;
+  display: -ms-grid;
+  display: grid;
+  text-align: left;
+  padding: 50px;
+  position: relative;
+  color: white;
+  height: auto;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: details;
+}
+
+body main .contact {
+  background-color: red;
+  display: block;
+  margin-bottom: 35px;
+  height: auto;
+}
+
+body main #contactdetails {
+  background-color: #F2EFE6;
+  display: block;
+  text-align: right;
+  height: auto;
+  text-align: center;
+}
+
+body #footer {
+  background-color: white;
+  color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  margin-left: 25px;
+}
+/*# sourceMappingURL=style2.css.map */
