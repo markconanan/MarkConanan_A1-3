@@ -1,7 +1,5 @@
-@import url("https: //cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css");
-// @import url(typebase.css);
+@import 'variables.scss';
 
-/* applies to everything */
 * {
     margin: 0;
     padding: 0;
@@ -9,60 +7,69 @@
     height: 100%;
 }
 
-// $font-stack: Helvetica,
-// sans-serif;
-$bordercolor: white;
-$bgcolor: #F2EFE6;
-$boxcolor1: red;
-$textcolor1: white;
-$boxcolor2: black;
-$textcolor: black;
+@mixin phone {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
 
-// @mixin phone {
-//     @media screen and (max-width: 500px) {
-//         @content;
-//     }
-// }
+@mixin tablet {
+    @media screen and (min-width: 501px) and (max-width: 960px) {
+        @content;
+    }
+}
 
-// @mixin tablet {
-//     @media screen and (min-width: 501px) and (max-width: 960px) {
-//         @content;
-//     }
-// }
+@mixin desktop {
+    @media screen and (min-width: 961px) {
+        @content;
+    }
+}
 
-// @mixin desktop {
-//     @media screen and (min-width: 961px) {
-//         @content;
-//     }
-// }
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: underline;
+}
+
+a:hover,
+a:active {
+    font-style: bold;
+    text-decoration: underline;
+}
 
 body {
-    // height: 100%;
     background-color: $bordercolor;
-    // font-family: Helvetica;
     color: $textcolor;
 
-    #menu {
+
+    .nav {
         overflow: hidden;
         background-color: $bordercolor;
         position: fixed;
         z-index: 1;
-        top: 0;
         width: 100%;
         height: 30px;
         padding: 5px;
         margin-left: 25px;
+        font-family: Montserrat;
+    }
+
+    .menu {
+        top: 0;
+    }
+
+    @keyframes headeranimation {
+        from {
+            background-position: right bottom;
+        }
+
+        to {
+            background-position: left bottom;
+        }
     }
 
     main {
         margin: 30px;
-
-        // div {
-        //     display: flex;
-        //     flex-wrap: wrap;
-
-        // }
-
 
         .header {
             height: 100vh;
@@ -70,7 +77,14 @@ body {
             flex-wrap: wrap;
             padding: 10;
             margin: 10;
+            font-family: $primaryfont;
             font-size: 3vw;
+
+            @include phone {
+                display: grid;
+                grid-template-areas: "mark""hello";
+                font-size: 2rem;
+            }
 
         }
 
@@ -80,213 +94,301 @@ body {
             position: relative;
             text-align: center;
             display: block;
+
+            @include phone {
+                width: 100%;
+                grid-area: hello;
+                // height: 50%;
+            }
+
         }
 
         #hello {
-
             position: relative;
             top: 40%;
-            // left: 45%;
 
         }
 
         #h2 {
             width: 65%;
-            background-color: $boxcolor1;
+            background: linear-gradient(to right, $boxcolor1 50%, $bgcolor 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: all 2s ease;
             display: flex;
             text-align: left;
             position: relative;
+            animation: headeranimation 2s forwards;
+
+            @include phone {
+                width: 100%;
+                grid-area: mark;
+                // height: 50%;
+            }
         }
 
         #mark {
             position: relative;
             top: 40%;
             left: 5%;
-            color: $textcolor1;
+            color: $bgcolor;
+
+            @include phone {
+                top: 30%;
+                left: 0%;
+                text-align: center;
+            }
         }
 
         .parallax {
-            /* The image used */
-            background-image: url("parallax.jpeg");
-
-            /* Full height */
-            max-height: 30vh;
-            min-width: 100%;
-            display: block;
-            text-align: center;
-
-
-
-            /* Create the parallax scrolling effect */
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
 
-        .markwho {
-            position: relative;
-            opacity: .5;
-            vertical-align: middle;
-            font-size: 4vw;
-            top: 45%;
-            color: red;
+        .deskimage {
+            background-image: url("parallax2.jpg");
+            height: 50%;
         }
 
-        .introblock {
-            background-color: red;
-            display: block;
-            padding: 10;
-            margin: 10;
+        .introgrid {
+            background-image: url("parallax.jpeg");
             height: auto;
+            display: grid;
+            grid-template-areas: "intro empty""introparagraph empty";
 
+            @include phone {
+                grid-template-columns: 1fr;
+                grid-template-areas: "intro""introparagraph";
+                height: auto;
+            }
         }
+
+        .empty {
+            background-color: $bgcolor;
+            height: 30px;
+        }
+
 
         .intro {
             background-color: $bgcolor;
-            display: block;
-            text-align: right;
-            padding-top: 30px;
+            display: grid;
+            padding-top: 20px;
+            padding-left: 100px;
             height: auto;
-            top: 50%;
-            text-align: center;
-            font-size: 3vw;
+            position: relative;
+            width: 60%;
+            font-size: 2rem;
+            grid-area: intro;
+            font-family: $secondaryfont;
+            color: $textcolor;
+
+
+            @include phone {
+                width: 100%;
+                line-height: normal;
+                padding: 30px;
+                font-size: 1.5rem;
+            }
+
         }
 
         .introparagraph {
             background-color: $bgcolor;
-            display: block;
+            display: grid;
             text-align: justify;
-            padding: 30px;
+            padding-top: 20px;
+            padding-left: 100px;
+            padding-right: 40px;
+            width: 60%;
             height: auto;
-            top: 50%;
-            font-size: 2vw;
+            font-size: 1.5vw;
+            grid-area: introparagraph;
+            font-family: $font3;
+            font-style: italic;
+
+            @include phone {
+                width: 100%;
+                line-height: normal;
+                padding: 30px;
+                font-size: 1rem;
+            }
         }
 
-        // .hire {
-        //     align-self: center;
-        // }
 
-        .skillset {
+        .grid {
+            background-image: url("parallax3.jpeg");
             height: auto;
-            display: flex;
-            flex-wrap: wrap;
-            margin: 10;
-            font-size: 1rem;
-            padding: 10;
-            width: 100%;
-        }
-
-        #skills {
-            width: 40%;
-            background-color: red;
-            position: relative;
-            text-align: center;
+            min-width: 100%;
             display: grid;
-            height: auto;
-            font-size: 3vw;
+            grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+            grid-template-areas: "empty . . skills skills";
+
+            @include phone {
+                grid-template-columns: 1fr;
+                grid-template-areas: ".""skills";
+            }
+
         }
 
-        #tech {
-            width: 60%;
-            background-color: $boxcolor2;
-            display: block;
-            text-align: left;
-            padding: 50px;
-            position: relative;
-            color: $textcolor1;
-            font-size: 1.5vw;
-        }
-
-        .projectinfo {
-            height: auto;
-            display: flex;
-            flex-wrap: wrap;
-            margin: 10;
-            font-size: 1.5vw;
-            padding: 10;
-        }
-
-        #projectdetails {
-            width: 60%;
+        .empty2 {
             background-color: $bgcolor;
-            position: relative;
-            text-align: left;
-            display: grid;
-            height: auto;
+            grid-area: empty;
         }
 
-        #projects {
-            width: 40%;
-            background-color: red;
-            display: block;
-            text-align: left;
-            padding: 50px;
+
+        .skills {
+            // width: 40%;
+            background-color: $bgcolor;
+            padding-left: 50px;
+            padding-right: 50px;
+            // padding-top: 80px;
             position: relative;
-            color: $textcolor1;
+            // text-align: center;
+            display: grid;
             height: auto;
+            // font-size: 2vw;
+            font-family: $secondaryfont;
+            // font-style: bold;
+            grid-area: skills;
+
+            @include phone {
+                width: 100%;
+                padding: 30px;
+            }
         }
+
+
+        .projects {
+            width: 100%;
+            background-color: $boxcolor1;
+            display: grid;
+            text-align: left;
+            padding: 20px;
+            position: relative;
+            color: $bgcolor;
+            height: auto;
+            font-family: $primaryfont;
+            margin-bottom: 10px;
+
+            @include phone {
+                width: 100%;
+                padding: 30px;
+            }
+        }
+
 
         .aboutme {
             height: auto;
-            display: flex;
-            flex-wrap: wrap;
-            margin: 10;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas: "history details details details";
+
+            @include phone {
+                grid-template-columns: 1fr;
+                grid-template-areas: "history""details";
+            }
+        }
+
+        .history {
+            background-color: $bgcolor;
+            display: grid;
+            padding-top: 20px;
+            padding-left: 100px;
+            text-align: left;
+            font-size: 1.2rem;
+            height: auto;
+            position: relative;
+            grid-area: history;
+            font-family: $font3;
+
+            @include phone {
+                padding: 30px;
+                text-align: center;
+            }
+        }
+
+        .details {
+
+            background-color: $bgcolor;
+            display: grid;
+            text-align: justify;
+            position: relative;
+            padding-top: 20px;
+            padding-left: 100px;
+            padding-right: 50px;
+            padding-bottom: 30px;
+            height: auto;
             font-size: 1rem;
-            padding: 10;
+            font-family: $primaryfont;
+            font-style: italic;
+            grid-area: details;
+            line-height: 150%;
+
+            @include phone {
+                padding: 30px;
+                text-align: center;
+            }
         }
 
-        #history {
-            width: 40%;
-            background-color: $bgcolor;
-            position: relative;
-            text-align: left;
+        .contactgrid {
+            height: auto;
             display: grid;
-            height: auto;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: "contactme contactdetails contactdetails";
+            padding-bottom: 30px;
+
+            @include phone {
+                grid-template-columns: 1fr;
+                grid-template-areas: "contactme""contactdetails";
+            }
+
+            @include tablet {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "contactme contactdetails";
+                height: auto;
+            }
         }
 
-        #experiencedetails {
-            width: 60%;
-            background-color: red;
+        .contactme {
+            background-color: $bordercolor;
             display: grid;
-            text-align: left;
-            padding: 50px;
+            padding-top: 50px;
+            padding-left: 100px;
+            height: 100px;
             position: relative;
-            color: $textcolor1;
-            height: auto;
+            grid-area: contactme;
+            font-family: $font3;
+
+            @include phone {
+                padding: 50px;
+            }
+
+            @include tablet {
+                padding: 50px;
+            }
+
         }
 
-        .contact {
-            background-color: red;
-            display: block;
-            margin-bottom: 35px;
+        .contactdetails {
+            background-color: $bordercolor;
+            display: grid;
+            padding-top: 50px;
             height: auto;
+            position: relative;
+            font-family: $primaryfont;
+            grid-area: contactdetails;
+            padding-bottom: 50px;
 
+            @include phone {
+                padding: 50px;
+            }
         }
-
-        #contactdetails {
-            background-color: $bgcolor;
-            display: block;
-            text-align: right;
-            height: auto;
-            text-align: center;
-        }
-
-
-
     }
 
-    #footer {
-        // overflow: hidden;
-        background-color: $bordercolor;
-        color: black;
-        position: fixed;
+    .footer {
         bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 30px;
-        padding: 5px;
-        margin-left: 25px;
     }
 
 

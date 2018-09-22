@@ -6,66 +6,81 @@ Developed by Mark Conanan
 
 #### Link to Portfolio
 [Mark Conanan's Portfolio]
-[Github Repository Link](https://github.com/markconanan/CA_Assessment)
+[Github Repository Link](https://github.com/markconanan/MarkConanan_A1-3)
 
 ### **Description**
 #### **Purpose**
 A portfolio to showcase my skills and profile to potential employers and collaborators.
 #### **Functionality**
-1. The portfolio shows:
-* My profile as an upcoming full stack developer
-* Number of sets for the exercise
-* Weight used in the exercise
-* Reps achieved for the exercise
-2. The application can display the exercise log as the user is inputting each set of exercise.
-3. The application can display the complete list after the workout is complete.
+1. The portfolio shows my profile as an upcoming full stack developer.
+2. The portfolio has responsive design and will display well in different screen sizes.
+3. All elements are placed in a visually appealing manner.
 #### **Sitemap**
-* 
+* Portfolio only has 1 page with links to Linked In and Github projects. It also has a nav footer bar which links to sections on the page.
 #### **Screenshots**
-Title Screen
-![Screenshot1 ](/docs/screenshot1.png)
-After entering exercise name and number of sets. Input of weights and reps.
-![Screenshot2 ](/docs/screenshot2.png)
-After finishing a set and starting with the next one.
-![Screenshot3 ](/docs/screenshot3.png)
-After completing the sets of exercise, app will ask if you want to continue the exercise.
-![Screenshot4 ](/docs/screenshot4.png)
-App displays the complete log of the session.
-![Screenshot5 ](/docs/screenshot5.png)
+Desktop Screens
+![Screenshot1 ](/docs/Screenshot1.png)
+![Screenshot2 ](/docs/Screenshot2.png)
+![Screenshot3 ](/docs/Screenshot3.png)
+![Screenshot4 ](/docs/Screenshot4.png)
+![Screenshot5 ](/docs/Screenshot5.png)
+On Mobile
+![Screenshot6 ](/docs/Screenshot6.png)
+![Screenshot7 ](/docs/Screenshot7.png)
+![Screenshot8 ](/docs/Screenshot8.png)
+![Screenshot9 ](/docs/Screenshot9.png)
+![Screenshot10 ](/docs/Screenshot10.png)
+
 #### **Target Audience**
 * The portfolio is targeted towards recruiters, potential employers, potential collaborators, and occassional followers and stalkers.
 ### **Details of Planning and Design**
 #### **Design Process**
-Whiteboards used during brainstorming and planning
-![brainstorm1 ](/docs/brainstorm1.png)
-![brainstorm2](/docs/brainstorm2.png)
-
+* The website aesthetic is aimed to be simple and dynamic, displaying the owner's personality and web design capability thru the portfolio.
+* Portfolio is designed to be on one page, with the initial screen having an animation to get the attention of viewers.
+* Grids with parallax backgrounds are used to display parallax images with text content on the side. 
+* Different fonts were used to emphasize text content.
+* A sticky header and footer/nav bar is used with the body margins to provide a frame on the page.
+* Color palette used is derived from the first parallax image used (shown below) with the addition of color Red for sharp contrast with the muted colors.
+![Image](/docs/image.jpg)
 #### **Wireframes**
-![workflow](/docs/flowchart.png)
+![Wireframe](/docs/wireframe.jpg)
+#### **Usability Considerations**
+1. While the website can be displayed in all screen sizes, it would be best to be displayed in desktop or if in mobile with a landscape orientation.
+2. The website uses google fonts, and will not display correctly if not connected to the internet or if the google fonts service is discontinued.
+### **Details of Planning Process**
+#### **Project Plan and Timeline**
+18 September
+* Initial site design and wireframing
 
-#### **Personal Logo**
-4 September
-* Brainstorming - Identification of scope and purpose of application
-* Setup of Github Repository and Trello
-* Development of code for application 
-* Initial documentation
+19 September
+* Revision of site design and wireframe
+* Content writeup
 
-5 September
-* Testing and Error Handling
-* Documentation
-* Preparation for Presentation
+20 September
+* Development of web page
+* Breakdown of tasks in Trello
 
-6 September
-* Completion of Application
-* Presentation of Application 
+21 September
+* Development of webpage
+* Making site responsive
 
-#### **Screenshot of Trello Boards**
-![trelloscreenshot](/docs/trelloscreenshot.png)
+23 September
+* Submission and presentation
+#### **Screenshots of Trello Boards**
+![Trello](/docs/trello.png)
 
-#### **Evidence of Communication**
-Both developers sat next to each other during the whole project timeline.
+### **Short Answers Q&A**
+#### **Describe key events in the development of the internet from the 1980s to today (max. 150 words)**
+At the beginning of the 80s, Transmission Control Protocol (TCP) and Internet Protocol (IP), emerge as the protocol for ARPANET. DNS was also established shortly after. Around 1986 The National Science Foundation’s NSFNET goes online.
 
-Slack screenshot below
-![slackscreenshot](/docs/slackscreenshot.png)
+Tim Berners-Lee develops HTML at the beginning of the 90s. This also heralds the dot-com boom as Netscape, Yahoo!, Amazon.com, Craigslist, eBay, Netflix and Google go live in this decade. It bursts in 2000 as vulnerabilities in the internet arise. 
+
+In the 2000s, social networks started to arise, with MySpace, Facebook, Youtube, Reddit, Twitter going live. Smartphones have also been launched, enabling people to have ubiquitous access to the internet.
+
+#### **Define and describes the relationship between fundamental aspects of the internet such as: domains, web servers, DNS, and web browsers (max. 150 words)**
+A web browser is the software application used to access information in the internet. With the Domain or Domain name, the address of the website which points to an IP address, browsers are able to retrieve and display the information from the web servers which hosts the data of the website. If the website is a website that has not been visited before (therefor the IP address is not in the cache) the web browser will contact the DNS server which contains the record of the IP address for the particular domain name or address.
+
+#### **Reflect on one aspect of the development of internet technologies and how it has contributed to the world today (max. 150 words)**
+Internet ushered in the information age and has greatly impacted how the world works today in countless ways. One is enabling remote access to information systems and changing how global businesses operate. This has enabled companies to process and send information faster across business units thus leading to better business decisions. It has also enabled them to have people access their systems anywhere, thus enabling remote work, and even making outsourcing work to other locations possible instead of having one central head office where all the operations are located. This has changed the business landscape and enabled companies to expand bigger than ever as barriers of distance are becoming less important with information being able to flow freely and instantly.
 
 
