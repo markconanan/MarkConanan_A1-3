@@ -5,43 +5,47 @@ Developed by Mark Conanan
 
 
 #### Link to Portfolio
-[Mark Conanan's Portfolio]
+[Portfolio](https://markconanan.github.io./)
 [Github Repository Link](https://github.com/markconanan/MarkConanan_A1-3)
 
 ### **Description**
 #### **Purpose**
-A portfolio to showcase my skills and profile to potential employers and collaborators.
+A portfolio to showcase and pitch my profile and skills to potential employers and collaborators.
 #### **Functionality**
 1. The portfolio shows my profile as an upcoming full stack developer.
 2. The portfolio has responsive design and will display well in different screen sizes.
+3. Footer bar serves as the nav bar with 
 3. All elements are placed in a visually appealing manner.
 #### **Sitemap**
-* Portfolio only has 1 page with links to Linked In and Github projects. It also has a nav footer bar which links to sections on the page.
+* index.html (Portfolio only has 1 page with links to Linked In and Github projects. It also has a nav footer bar which links to sections on the page)
 #### **Screenshots**
-Desktop Screens
+* Desktop Screens
 ![Screenshot1 ](/docs/Screenshot1.png)
 ![Screenshot2 ](/docs/Screenshot2.png)
 ![Screenshot3 ](/docs/Screenshot3.png)
 ![Screenshot4 ](/docs/Screenshot4.png)
 ![Screenshot5 ](/docs/Screenshot5.png)
-On Mobile
+* On Mobile
 ![Screenshot6 ](/docs/Screenshot6.png)
 ![Screenshot7 ](/docs/Screenshot7.png)
 ![Screenshot8 ](/docs/Screenshot8.png)
 ![Screenshot9 ](/docs/Screenshot9.png)
 ![Screenshot10 ](/docs/Screenshot10.png)
-
 #### **Target Audience**
 * The portfolio is targeted towards recruiters, potential employers, potential collaborators, and occassional followers and stalkers.
+#### **Tech Stack**
+* The portfolio was developed using HTML, CSS and SCSS.
 ### **Details of Planning and Design**
 #### **Design Process**
 * The website aesthetic is aimed to be simple and dynamic, displaying the owner's personality and web design capability thru the portfolio.
 * Portfolio is designed to be on one page, with the initial screen having an animation to get the attention of viewers.
 * Grids with parallax backgrounds are used to display parallax images with text content on the side. 
-* Different fonts were used to emphasize text content.
+* Different fonts were used to emphasize text content (Montserrat, Lato and Libre Baskille)
 * A sticky header and footer/nav bar is used with the body margins to provide a frame on the page.
-* Color palette used is derived from the first parallax image used (shown below) with the addition of color Red for sharp contrast with the muted colors.
-![Image](/docs/image.jpg)
+* All pictures are sourced from unsplash.com. 
+[Unsplash Link](https://unsplash.com/collections/3142991/portfolio/b790699caec8ecb5e0c5ae40842d70dc)
+* Mood resembles a minimalist work desk with red for contrast. Color palette used is muted colors with red.
+![Image](/docs/moodboard.png)
 #### **Wireframes**
 ![Wireframe](/docs/wireframe.jpg)
 #### **Usability Considerations**

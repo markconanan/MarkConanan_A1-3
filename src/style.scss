@@ -25,22 +25,22 @@
     }
 }
 
-a:link,
-a:visited {
-    color: inherit;
-    text-decoration: underline;
-}
-
-a:hover,
-a:active {
-    font-style: bold;
-    text-decoration: underline;
-}
 
 body {
     background-color: $bordercolor;
     color: $textcolor;
 
+    a:link,
+    a:visited {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    a:hover,
+    a:active {
+        font-weight: bold;
+        text-decoration: underline;
+    }
 
     .nav {
         overflow: hidden;
@@ -54,7 +54,7 @@ body {
         font-family: Montserrat;
     }
 
-    .menu {
+    .head {
         top: 0;
     }
 
@@ -80,6 +80,13 @@ body {
             font-family: $primaryfont;
             font-size: 3vw;
 
+            // @include tablet {
+            //     display: grid;
+            //     grid-template-areas: "mark""hello";
+            //     font-size: 2rem;
+            // }
+
+
             @include phone {
                 display: grid;
                 grid-template-areas: "mark""hello";
@@ -95,10 +102,14 @@ body {
             text-align: center;
             display: block;
 
+            // @include tablet {
+            //     width: 100%;
+            //     grid-area: hello;
+            // }
+
             @include phone {
                 width: 100%;
                 grid-area: hello;
-                // height: 50%;
             }
 
         }
@@ -120,10 +131,14 @@ body {
             position: relative;
             animation: headeranimation 2s forwards;
 
+            // @include tablet {
+            //     width: 100%;
+            //     grid-area: mark;
+            // }
+
             @include phone {
                 width: 100%;
                 grid-area: mark;
-                // height: 50%;
             }
         }
 
@@ -148,14 +163,15 @@ body {
         }
 
         .deskimage {
-            background-image: url("parallax2.jpg");
+            background-image: url("img/parallaxbackground.jpg");
             height: 50%;
         }
 
         .introgrid {
-            background-image: url("parallax.jpeg");
+            background-image: url("img/aboutme.jpeg");
             height: auto;
             display: grid;
+            grid-template-columns: 1fr 1fr;
             grid-template-areas: "intro empty""introparagraph empty";
 
             @include phone {
@@ -163,11 +179,27 @@ body {
                 grid-template-areas: "intro""introparagraph";
                 height: auto;
             }
+
+            @include tablet {
+                grid-template-columns: 60% 40%;
+                grid-template-areas: "intro empty""introparagraph empty";
+                height: auto;
+            }
+
         }
 
         .empty {
             background-color: $bgcolor;
             height: 30px;
+
+            @include phone {
+                height: 10px;
+            }
+        }
+
+        .empty2 {
+            background-color: $bgcolor;
+            grid-area: empty;
         }
 
 
@@ -178,7 +210,6 @@ body {
             padding-left: 100px;
             height: auto;
             position: relative;
-            width: 60%;
             font-size: 2rem;
             grid-area: intro;
             font-family: $secondaryfont;
@@ -192,6 +223,10 @@ body {
                 font-size: 1.5rem;
             }
 
+            @include tablet {
+                padding-left: 50px;
+            }
+
         }
 
         .introparagraph {
@@ -201,7 +236,6 @@ body {
             padding-top: 20px;
             padding-left: 100px;
             padding-right: 40px;
-            width: 60%;
             height: auto;
             font-size: 1.5vw;
             grid-area: introparagraph;
@@ -214,11 +248,15 @@ body {
                 padding: 30px;
                 font-size: 1rem;
             }
+
+            @include tablet {
+                padding-left: 50px;
+            }
         }
 
 
         .grid {
-            background-image: url("parallax3.jpeg");
+            background-image: url("img/skills.jpeg");
             height: auto;
             min-width: 100%;
             display: grid;
@@ -230,13 +268,11 @@ body {
                 grid-template-areas: ".""skills";
             }
 
+            @include tablet {
+                grid-template-columns: 50px 1fr 1fr;
+                grid-template-areas: "empty . skills";
+            }
         }
-
-        .empty2 {
-            background-color: $bgcolor;
-            grid-area: empty;
-        }
-
 
         .skills {
             // width: 40%;
@@ -257,6 +293,7 @@ body {
                 width: 100%;
                 padding: 30px;
             }
+
         }
 
 
@@ -275,6 +312,10 @@ body {
             @include phone {
                 width: 100%;
                 padding: 30px;
+            }
+
+            @include tablet {
+                padding: 50px;
             }
         }
 
@@ -307,6 +348,10 @@ body {
                 padding: 30px;
                 text-align: center;
             }
+
+            @include tablet {
+                padding: 50px;
+            }
         }
 
         .details {
@@ -329,6 +374,10 @@ body {
             @include phone {
                 padding: 30px;
                 text-align: center;
+            }
+
+            @include tablet {
+                padding: 50px;
             }
         }
 
@@ -389,6 +438,19 @@ body {
 
     .footer {
         bottom: 0;
+
+        a:link,
+        a:active,
+        a:visited {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover,
+
+            {
+            text-decoration: underline;
+        }
     }
 
 
