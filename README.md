@@ -5,8 +5,8 @@ Developed by Mark Conanan
 
 
 #### Link to Portfolio
-[Portfolio](https://markconanan.github.io./)
-[Github Repository Link](https://github.com/markconanan/MarkConanan_A1-3)
+* [Portfolio](https://markconanan.github.io./)
+* [Github Repository Link](https://github.com/markconanan/Portfolio)
 
 ### **Description**
 #### **Purpose**
